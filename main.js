@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             id: new Date().getTime,
             title: inputBookTitle.value,
             author: inputBookAuthor.value,
-            year: inputBookYear.value,
+            year: Number(inputBookYear.value),
             isComplete: inputBookIsComplete.checked,
         };
 
@@ -131,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
         bookItem.style.margin = '15px';
 
         const actionButtons = document.createElement('div');
-        actionButtons.setAttribute("data-testid", "actionButtons");
         actionButtons.className = 'action';
 
         const title = document.createElement('h3');
@@ -157,17 +156,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const removeButton = createActionButton('Hapus buku', 'red', function () {
             removeBook(book.id);
-        });
+        }, 'bookItemDeleteButton');
 
         let toggleButton;
         if (book.isComplete) {
             toggleButton = createActionButton('Belum selesai dibaca', 'yellow', function () {
                 toggleIsComplete(book.id);
-            });
+            }, 'bookItemIsCompleteButton');
         } else {
             toggleButton = createActionButton('Selesai dibaca', 'green', function () {
                 toggleIsComplete(book.id);
-            });
+            }, 'bookItemIsCompleteButton');
         }
 
         // Action button styling
@@ -195,11 +194,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to create an action button element
-    function createActionButton(text, className, clickHandler) {
+    function createActionButton(text, className, clickHandler, attributeValue) {
         const button = document.createElement('button');
         button.textContent = text;
         button.classList.add(className);
         button.addEventListener('click', clickHandler);
+        button.setAttribute("data-testid", attributeValue);
         return button;
     }
 
