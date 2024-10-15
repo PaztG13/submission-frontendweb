@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    margin: 50px 0;
+    width: 50%;
+    background-color: #96e1ff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+}
+
+section {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #96e1ff;
+    border-radius: 25px;
+}
+
+section h2 {
+    width: 100%;
+    margin: 0;
+    padding: 2.5% 0;
+    background-color: #34c6ff;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+form {
+    width: 80%;
+    padding: 7% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    font-size: 16pt;
+}
+
+input {
+    padding: 8px 15px;
+    font-size: 12pt;
+    border-radius: 10px;
+}
+
+.checkbox {
+    margin: 2.5% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.checkbox label {
+    font-size: 10pt;
+}
+
+button {
+    padding: 2.5% 0;
+    font-size: 14pt;
+    font-weight: 700;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: #34c6ff;
+    color: white;
+}
+
+footer {
+    width: 50%;
+    margin: 50px 0;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    background-color:#96e1ff;
+    border-radius: 15px;
+}
+
+.action {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    height: 50px;
+    gap: 10px;
+}
+
+.action button {
+    padding: 0 15px;
+}
+
+.book_item {
+    width: 80%;
+}
